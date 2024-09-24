@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses - E-Learning Platform</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background: linear-gradient(90deg, #333, #555);
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #ddd;
+        }
+
+        .courses-page {
+            padding: 50px 20px;
+            background-color: #fafafa;
+        }
+
+        .courses-page h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .search-bar {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .search-bar input {
+            padding: 12px;
+            width: 100%;
+            max-width: 400px;
+            border: 2px solid #ccc;
+            border-radius: 30px;
+            font-size: 1em;
+            transition: border-color 0.3s ease;
+        }
+
+        .search-bar input:focus {
+            outline: none;
+            border-color: #007bff;
+        }
+
+        .filter-options {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+
+        .filter-options select {
+            padding: 12px;
+            margin: 0 10px;
+            border-radius: 30px;
+            border: 2px solid #ccc;
+            font-size: 1em;
+            transition: border-color 0.3s ease;
+        }
+
+        .filter-options select:focus {
+            outline: none;
+            border-color: #007bff;
+        }
+
+        .course-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .course-card {
+            background-color: #fff;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .course-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .course-card h3 {
+            padding: 20px;
+            margin: 0;
+            font-size: 1.5em;
+            color: #007bff;
+        }
+
+        .course-card p {
+            padding: 0 20px;
+            font-size: 1em;
+            color: #666;
+        }
+
+        .course-card button {
+            width: 100%;
+            padding: 15px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-size: 1em;
+            border-radius: 0 0 10px 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .course-card button:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 0.9em;
+        }
+
+        footer ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        footer ul li {
+            display: inline-block;
+            margin: 0 10px;
+        }
+
+        footer ul li a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer ul li a:hover {
+            color: #ddd;
+        }
+
+        @media (max-width: 768px) {
+            .course-list {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+
+            .filter-options select {
+                margin: 5px 0;
+                width: 90%;
+                max-width: 250px;
+            }
+
+            .search-bar input {
+                width: 90%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .course-list {
+                grid-template-columns: 1fr;
+            }
+
+            .filter-options select {
+                width: 100%;
+            }
+
+            .search-bar input {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Our Courses</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="aboutUs.html">About Us</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="courses-page">
+    <div class="search-bar">
+        <input type="text" placeholder="Search for courses...">
+    </div>
+
+    <div class="filter-options">
+        <select>
+            <option value="">Filter by Category</option>
+            <option value="tech">Technology</option>
+            <option value="business">Business</option>
+            <option value="art">Art</option>
+        </select>
+        <select>
+            <option value="">Sort by Popularity</option>
+            <option value="new">Newest</option>
+            <option value="high-rating">Highest Rating</option>
+        </select>
+    </div>
+
+    <div class="course-list">
+        <div class="course-card">
+            <h3>1ST SEMESTER MATHEMATICS</h3> 
+            <p>Algebra-I & Calculus-I</p> 
+            <button class="btn-link" data-id="1">Enroll Now</button> 
+        </div>
+        
+        <div class="course-card">
+            <h3>1ST SEMESTER PHYSICS</h3> 
+            <p>Mathematical Physics-I, Mechanics, Waves & Acoustics</p> 
+            <button class="btn-link" data-id="2">Enroll Now</button> 
+        </div>
+        
+        <div class="course-card">
+            <h3>3RD SEMESTER MATHEMATICS</h3> 
+            <p>Statics & Calculus-II</p> 
+            <button class="btn-link" data-id="3">Enroll Now</button> 
+        </div>
+        
+        <div class="course-card">
+            <h3>3RD SEMESTER PHYSICS</h3> 
+            <p>Thermal Physics, Optics</p> 
+            <button class="btn-link" data-id="4">Enroll Now</button> 
+        </div>
+        
+        <div class="course-card">
+            <h3>5TH SEMESTER COMPUTER SCIENCE</h3> 
+            <p>Operating System & Introduction To LINUX</p> 
+            <button class="btn-link" data-id="5">Enroll Now</button> 
+        </div>
+        
+        <div class="course-card">
+            <h3>5TH SEMESTER COMPUTER SCIENCE</h3> 
+            <p>Object Oriented Programming Through Java</p> 
+            <button class="btn-link" data-id="6">Enroll Now</button> 
+        </div>
+        
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2024 E-Learning Platform</p>
+    <ul>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Service</a></li>
+    </ul>
+</footer>
+
+<script src="main.js">
+</script>
+
+</body>
+</html>
