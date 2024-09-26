@@ -96,7 +96,7 @@
 
         .course-list {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            grid-template-columns: repeat(2, minmax(350px, 1fr));
             gap: 30px;
             justify-content: center;
             padding: 20px;
@@ -223,56 +223,21 @@
     </div>
 
     <div class="filter-options">
-        <select>
-            <option value="">Filter by Category</option>
-            <option value="tech">Technology</option>
-            <option value="business">Business</option>
-            <option value="art">Art</option>
+        <select id="semester">
+            <option value="">All</option>
+            <option value="1">Semester 1</option>
+            <option value="3">Semester 3</option>
+            <option value="5">Semester 5</option>
         </select>
-        <select>
-            <option value="">Sort by Popularity</option>
-            <option value="new">Newest</option>
-            <option value="high-rating">Highest Rating</option>
+        <select id="subject">
+            <option value="">All</option>
+            <option value="Physics">Physics</option>
+            <option value="Mathematics">Mathematics</option>
+            <option value="Computer Science">Computer Science</option>
         </select>
     </div>
 
     <div class="course-list">
-        <div class="course-card">
-            <h3>1ST SEMESTER MATHEMATICS</h3> 
-            <p>Algebra-I & Calculus-I</p> 
-            <button class="btn-link" data-id="1">Enroll Now</button> 
-        </div>
-        
-        <div class="course-card">
-            <h3>1ST SEMESTER PHYSICS</h3> 
-            <p>Mathematical Physics-I, Mechanics, Waves & Acoustics</p> 
-            <button class="btn-link" data-id="2">Enroll Now</button> 
-        </div>
-        
-        <div class="course-card">
-            <h3>3RD SEMESTER MATHEMATICS</h3> 
-            <p>Statics & Calculus-II</p> 
-            <button class="btn-link" data-id="3">Enroll Now</button> 
-        </div>
-        
-        <div class="course-card">
-            <h3>3RD SEMESTER PHYSICS</h3> 
-            <p>Thermal Physics, Optics</p> 
-            <button class="btn-link" data-id="4">Enroll Now</button> 
-        </div>
-        
-        <div class="course-card">
-            <h3>5TH SEMESTER COMPUTER SCIENCE</h3> 
-            <p>Operating System & Introduction To LINUX</p> 
-            <button class="btn-link" data-id="5">Enroll Now</button> 
-        </div>
-        
-        <div class="course-card">
-            <h3>5TH SEMESTER COMPUTER SCIENCE</h3> 
-            <p>Object Oriented Programming Through Java</p> 
-            <button class="btn-link" data-id="6">Enroll Now</button> 
-        </div>
-        
     </div>
 </section>
 
