@@ -154,50 +154,33 @@ document.addEventListener("DOMContentLoaded",function(){
         </div>`
     }
     
-    // checking if file is index or course
-    else if(fileName == "index.html" || fileName == "courses.html"){
+    // checking if file is course
+    else if(fileName == "courses.html"){
         
         let htmlString = "";
+        // if the file is course
+        htmlString = "";
+        let valueSemester = "";
+        let valueSubject = "";
+        lessons.forEach((lesson) => {
+            htmlString += `<div class="course-card">
+            <h3>${lesson.name}</h3> 
+            <p>${lesson.details}</p> 
+            <button class="btn-link" onclick = "gotoCoursePage(${lesson.id})" >Enroll Now</button> 
+            </div>`;
+        });
+        document.querySelector(".course-list").innerHTML = htmlString;
 
-        // if file is index
-        if(fileName == "index.html"){
-            htmlString = "";
-            for(let i = 0 ; i<3 ; i++){
-                let courseDetails = lessons[i];
-                htmlString += `<div class="course-card">
-                <h3>${courseDetails.name}</h3> 
-                <p>${courseDetails.details}</p> 
-                <button class="btn-link" onclick = "gotoCoursePage(${courseDetails.id})">Enroll Now</button> 
-                </div>`;
-            }
-            document.querySelector(".courses").innerHTML = htmlString;
+        // when semester is selected
+        document.querySelector("#semester").onchange = function(){
+            valueSemester = this.value;
+            document.querySelector(".course-list").innerHTML = selectedOptions(valueSemester , valueSubject);
         }
 
-        // if the file is course
-        else{
-            htmlString = "";
-            let valueSemester = "";
-            let valueSubject = "";
-            lessons.forEach((lesson) => {
-                htmlString += `<div class="course-card">
-                <h3>${lesson.name}</h3> 
-                <p>${lesson.details}</p> 
-                <button class="btn-link" onclick = "gotoCoursePage(${lesson.id})" >Enroll Now</button> 
-                </div>`;
-            });
-            document.querySelector(".course-list").innerHTML = htmlString;
-
-            // when semester is selected
-            document.querySelector("#semester").onchange = function(){
-                valueSemester = this.value;
-                document.querySelector(".course-list").innerHTML = selectedOptions(valueSemester , valueSubject);
-            }
-
-            // when subject is selected 
-            document.querySelector("#subject").onchange = function(){
-                valueSubject = this.value;
-                document.querySelector(".course-list").innerHTML = selectedOptions(valueSemester , valueSubject);
-            }
+        // when subject is selected 
+        document.querySelector("#subject").onchange = function(){
+            valueSubject = this.value;
+            document.querySelector(".course-list").innerHTML = selectedOptions(valueSemester , valueSubject);
         }
     }
 });
