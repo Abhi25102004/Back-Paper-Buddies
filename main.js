@@ -7,8 +7,7 @@ let lessons =[
         "semester":"1",
         "subject":"Mathematics",
         "contents":"https://youtube.com/playlist?list=PL8tjymE0TCzBJbjVyOiDrHPFX76rO3TF_&si=pKoxt2YhRLj1kfbZ",
-        "syllabus":"Maths_1.pdf",
-        "questionPaper":"sem1Maths.pdf"
+        "syllabus":"Maths_1.pdf"
     },
     {
         "id":2,
@@ -17,8 +16,7 @@ let lessons =[
         "semester":"1",
         "subject":"Physics",
         "contents":"https://youtube.com/playlist?list=PL8tjymE0TCzAE0qPVXMFUNznv0zESb2Fq&si=myKQU44WsO46xdIu",
-        "syllabus":"Physics_Syllabus_1.pdf",
-        "questionPaper":"sem1Physics.pdf"
+        "syllabus":"Physics_Syllabus_1.pdf"
     },
     {
         "id":3,
@@ -27,8 +25,7 @@ let lessons =[
         "semester":"3",
         "subject":"Mathematics",
         "contents":"https://youtube.com/playlist?list=PL8tjymE0TCzDv2V5DrOvfyMvVZQtKwY2K&si=wfUe5jmfCetp3rUv",
-        "syllabus":"Maths_3.pdf",
-        "questionPaper":""
+        "syllabus":"Maths_3.pdf"
     },
     {
         "id":4,
@@ -37,8 +34,7 @@ let lessons =[
         "semester":"3",
         "subject":"Physics",
         "contents":"https://youtube.com/playlist?list=PL8tjymE0TCzCIVjZ8qz5BZGW1B9kqDcBY&si=XHiGE2rjBPizYbR5",
-        "syllabus":"Physics_Syllabus_3.pdf",
-        "questionPaper":""
+        "syllabus":"Physics_Syllabus_3.pdf"
     }
 ]
 
@@ -143,7 +139,6 @@ else{
     const details = urlParams.get('details');
     const playlist = urlParams.get('playlist');
     const syllabus = urlParams.get('syllabus');
-    const question = urlParams.get('question');
     
     document.querySelector('.course-detail').innerHTML=`<div class="course-info">
     <div>
@@ -157,7 +152,7 @@ else{
     <ul>
         <li><a href="${syllabus}">Download Course Syllabus</a></li>
         <li><a href="${playlist}">Video Playlist</a></li>
-        <li><a href="${question}">Previous Year Question Papers</a></li>
+        <li><a href="https://anthonys.ac.in/pages/facilities/fclt_library.php">Previous Year Question Papers</a></li>
     </ul>
     </div>`
 }    
