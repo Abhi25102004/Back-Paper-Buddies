@@ -3,284 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BackPaperBuddies</title>
-    <style>
-        /* Global Styles */
-        body {
-            font-family: 'Poppins', Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-            color: #333;
-            scroll-behavior: smooth;
-        }
-
-        header {
-            background-color: #282c34;
-            color: #fff;
-            padding: 15px 0;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            left: 0;
-            z-index: 100;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-        }
-
-        header h1 {
-            text-align: center;
-            padding: 15px;
-            margin: 0;
-            font-size: 2rem;
-        }
-
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
-
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 1rem;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-
-        nav ul li a:hover {
-            color: #007bff;
-        }
-
-        .hero {
-            background: linear-gradient(rgba(0, 123, 255, 0.8), rgba(0, 123, 255, 0.8));
-            color: #fff;
-            padding: 150px 20px;
-            text-align: center;
-            padding-bottom: 45px;
-        }
-
-        .hero h1 {
-            font-size: 4rem;
-            margin-bottom: 20px;
-            animation: fadeInDown 1s ease-out;
-        }
-
-        .hero p {
-            font-size: 1.5rem;
-            margin-bottom: 30px;
-            animation: fadeInUp 1s ease-out;
-        }
-
-        .hero button {
-            padding: 15px 30px;
-            background-color: #fff;
-            color: #007bff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .hero button:hover {
-            background-color: #f4f4f4;
-        }
-
-        .popular-courses {
-            padding: 80px 20px;
-            padding-top: 20px;
-            text-align: center;
-        }
-
-        .popular-courses h2 {
-            font-size: 2.5rem;
-            margin-bottom: 50px;
-            position: relative;
-        }
-
-        .popular-courses h2::after {
-            content: '';
-            width: 60px;
-            height: 5px;
-            background-color: #007bff;
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-
-        .courses {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .course-card {
-            background-color: #fff;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            padding: 30px;
-            border-radius: 10px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .course-card:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-        }
-
-        .course-card h3 {
-            font-size: 1.5rem;
-            margin: 10px 0;
-        }
-
-        .course-card p {
-            font-size: 1rem;
-            color: #666;
-        }
-
-        .course-card button {
-            padding: 12px 20px;
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        .course-card button:hover {
-            background-color: #0056b3;
-        }
-
-        footer {
-            background-color: #282c34;
-            color: #fff;
-            padding: 20px 0;
-            text-align: center;
-            margin-top: 50px;
-        }
-
-        footer ul {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
-
-        footer ul li a {
-            color: #fff;
-            text-decoration: none;
-        }
-
-        /* Animations */
-        @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 1.5rem;
-            }
-
-            nav ul {
-                gap: 10px;
-            }
-
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .hero p {
-                font-size: 1.2rem;
-            }
-
-            .popular-courses h2 {
-                font-size: 2rem;
-            }
-
-            .courses {
-                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            }
-        }
-
-        @media (max-width: 480px) {
-            .hero {
-                padding: 100px 20px;
-            }
-
-            .hero h1 {
-                font-size: 2rem;
-            }
-
-            .hero p {
-                font-size: 1rem;
-            }
-
-            .courses {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    <title>Back Paper Buddies</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
+<body class="d-flex flex-column vh-100">
 
-<header>
-    <h1>Back Paper Buddies</h1>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="courses.html">Courses</a></li>
-            <li><a href="aboutUs.html">About Us</a></li>
-        </ul>
-    </nav>
-</header>
+    <header class="bg-primary text-white py-3">
+        <div class="container">
+            <h1 class="text-center">Back Paper Buddies</h1>
+            <nav>
+                <ul class="nav justify-content-center">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="courses.html">Courses</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="aboutUs.html">About Us</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-<section class="hero">
-    <h1>Ace Your Back Papers with Confidence</h1>
-    <p>Explore our wide range of courses and start learning today</p>
-</section>
+    <section class="hero bg-light text-center py-5 flex-grow-1 d-flex align-items-center">
+        <div class="container">
+            <h1 class="display-4">Ace Your Back Papers with Confidence</h1>
+            <p class="lead">Explore our wide range of courses and start learning today</p>
+        </div>
+    </section>
 
-<section class="popular-courses">
-    <h2>Popular Courses</h2>
-    <div class="courses">
-    </div>
-</section>
+    <section class="popular-courses py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Popular Courses</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <h3 class="card-title">1ST SEMESTER MATHEMATICS</h3>
+                            <p class="card-text">Algebra-I and Calculus-I</p>
+                            <button class="btn btn-primary" onclick="gotoCoursePage(0)">Enroll Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <h3 class="card-title">1ST SEMESTER PHYSICS</h3>
+                            <p class="card-text">Mathematical Physics-I, Mechanics, Waves and Acoustics</p>
+                            <button class="btn btn-primary" onclick="gotoCoursePage(1)">Enroll Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <h3 class="card-title">3RD SEMESTER MATHEMATICS</h3>
+                            <p class="card-text">Statics and Calculus-II</p>
+                            <button class="btn btn-primary" onclick="gotoCoursePage(2)">Enroll Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<footer>
-    <p>&copy; 2024 E-Learning Platform</p>
-    <ul>
-        <li><a href="#">Privacy Policy</a></li>
-        <li><a href="#">Terms of Service</a></li>
-    </ul>
-</footer>
+    <footer class="bg-dark text-white py-3 mt-auto">
+        <div class="container text-center">
+            <p>&copy; 2024 E-Learning Platform</p>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a class="text-white" href="#">Privacy Policy</a></li>
+                <li class="list-inline-item"><a class="text-white" href="#">Terms of Service</a></li>
+            </ul>
+        </div>
+    </footer>
 
-<script src="main.js">
-</script>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>

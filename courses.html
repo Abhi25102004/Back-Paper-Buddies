@@ -3,252 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Courses - E-Learning Platform</title>
-    <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-
-        header {
-            background: linear-gradient(90deg, #333, #555);
-            color: #fff;
-            padding: 20px 0;
-            text-align: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-
-        nav ul li {
-            display: inline-block;
-            margin: 0 15px;
-        }
-
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 1.1em;
-            transition: color 0.3s ease;
-        }
-
-        nav ul li a:hover {
-            color: #ddd;
-        }
-
-        .courses-page {
-            padding: 50px 20px;
-            background-color: #fafafa;
-        }
-
-        .courses-page h1 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-            color: #333;
-        }
-
-        .search-bar {
-            margin-bottom: 30px;
-            text-align: center;
-        }
-
-        .search-bar input {
-            padding: 12px;
-            width: 100%;
-            max-width: 400px;
-            border: 2px solid #ccc;
-            border-radius: 30px;
-            font-size: 1em;
-            transition: border-color 0.3s ease;
-        }
-
-        .search-bar input:focus {
-            outline: none;
-            border-color: #007bff;
-        }
-
-        .filter-options {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 30px;
-        }
-
-        .filter-options select {
-            padding: 12px;
-            margin: 0 10px;
-            border-radius: 30px;
-            border: 2px solid #ccc;
-            font-size: 1em;
-            transition: border-color 0.3s ease;
-        }
-
-        .filter-options select:focus {
-            outline: none;
-            border-color: #007bff;
-        }
-
-        .course-list {
-            display: grid;
-            grid-template-columns: repeat(2, minmax(350px, 1fr));
-            gap: 30px;
-            justify-content: center;
-            padding: 20px;
-        }
-
-        .course-card {
-            background-color: #fff;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-            overflow: hidden;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .course-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
-        }
-
-        .course-card h3 {
-            padding: 20px;
-            margin: 0;
-            font-size: 1.5em;
-            color: #007bff;
-        }
-
-        .course-card p {
-            padding: 0 20px;
-            font-size: 1em;
-            color: #666;
-        }
-
-        .course-card button {
-            width: 100%;
-            padding: 15px;
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            cursor: pointer;
-            font-size: 1em;
-            border-radius: 0 0 10px 10px;
-            transition: background-color 0.3s ease;
-        }
-
-        .course-card button:hover {
-            background-color: #0056b3;
-        }
-
-        footer {
-            background-color: #333;
-            color: #fff;
-            padding: 20px 0;
-            text-align: center;
-            font-size: 0.9em;
-        }
-
-        footer ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        footer ul li {
-            display: inline-block;
-            margin: 0 10px;
-        }
-
-        footer ul li a {
-            color: #fff;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        footer ul li a:hover {
-            color: #ddd;
-        }
-
-        @media (max-width: 768px) {
-            .course-list {
-                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            }
-
-            .filter-options select {
-                margin: 5px 0;
-                width: 90%;
-                max-width: 250px;
-            }
-
-            .search-bar input {
-                width: 90%;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .course-list {
-                grid-template-columns: 1fr;
-            }
-
-            .filter-options select {
-                width: 100%;
-            }
-
-            .search-bar input {
-                width: 100%;
-            }
-        }
-    </style>
+    <title>Courses - Back Paper Buddies</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
 
-<header>
-    <h1>Our Courses</h1>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="courses.html">Courses</a></li>
-            <li><a href="aboutUs.html">About Us</a></li>
-        </ul>
-    </nav>
+<header class="bg-primary text-white py-3">
+    <div class="container">
+        <h1 class="text-center">Our Courses</h1>
+        <nav>
+            <ul class="nav justify-content-center">
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="courses.html">Courses</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="aboutUs.html">About Us</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
 </header>
 
-<section class="courses-page">
-    <div class="search-bar">
-        <input type="text" placeholder="Search for courses...">
-    </div>
-
-    <div class="filter-options">
-        <select id="semester">
-            <option value="">All</option>
-            <option value="1">Semester 1</option>
-            <option value="3">Semester 3</option>
-        </select>
-        <select id="subject">
-            <option value="">All</option>
-            <option value="Physics">Physics</option>
-            <option value="Mathematics">Mathematics</option>
-        </select>
-    </div>
-
-    <div class="course-list">
+<section class="courses-page py-5 flex-grow-1">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <div class="card-body text-center">
+                        <h3 class="card-title">1ST SEMESTER MATHEMATICS</h3>
+                        <p class="card-text">Algebra-I and Calculus-I</p>
+                        <button class="btn btn-primary" onclick="gotoCoursePage(0)">Enroll Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <div class="card-body text-center">
+                        <h3 class="card-title">1ST SEMESTER PHYSICS</h3>
+                        <p class="card-text">Mathematical Physics-I, Mechanics, Waves and Acoustics</p>
+                        <button class="btn btn-primary" onclick="gotoCoursePage(1)">Enroll Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <div class="card-body text-center">
+                        <h3 class="card-title">3RD SEMESTER MATHEMATICS</h3>
+                        <p class="card-text">Statics and Calculus-II</p>
+                        <button class="btn btn-primary" onclick="gotoCoursePage(2)">Enroll Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <div class="card-body text-center">
+                        <h3 class="card-title">3RD SEMESTER PHYSICS</h3>
+                        <p class="card-text">Thermal Physics, Optics</p>
+                        <button class="btn btn-primary" onclick="gotoCoursePage(3)">Enroll Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
-<footer>
-    <p>&copy; 2024 E-Learning Platform</p>
-    <ul>
-        <li><a href="#">Privacy Policy</a></li>
-        <li><a href="#">Terms of Service</a></li>
-    </ul>
+<footer class="bg-dark text-white py-3">
+    <div class="container text-center">
+        <p>&copy; 2024 E-Learning Platform</p>
+        <ul class="list-inline">
+            <li class="list-inline-item"><a class="text-white" href="#">Privacy Policy</a></li>
+            <li class="list-inline-item"><a class="text-white" href="#">Terms of Service</a></li>
+        </ul>
+    </div>
 </footer>
 
-<script src="main.js">
-</script>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="main.js"></script>
 </body>
 </html>

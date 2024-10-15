@@ -3,207 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Course Detail - E-Learning Platform</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 15px 0;
-            text-align: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-        }
-
-        nav ul li {
-            margin: 0 15px;
-        }
-
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .course-detail {
-            padding: 84px 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .course-title {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-            text-align: center;
-            color: #007bff;
-        }
-
-        .course-info {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            margin-bottom: 40px;
-        }
-
-        .course-info img {
-            width: 100%;
-            max-width: 250px;
-            height: 250px;
-            object-fit: cover;
-            border-radius: 10px;
-            margin-bottom: 20px;
-        }
-
-        .course-info div {
-            max-width: 700px;
-        }
-
-        .course-info p {
-            font-size: 1.2em;
-            line-height: 1.6;
-            color: #555;
-        }
-
-        .resources {
-            background-color: #f9f9f9;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin-bottom: 40px;
-        }
-
-        .resources h3 {
-            margin-top: 0;
-            font-size: 1.8em;
-            color: #333;
-        }
-
-        .resources ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .resources ul li {
-            margin-bottom: 10px;
-        }
-
-        .resources ul li a {
-            color: #007bff;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .resources ul li a:hover {
-            text-decoration: underline;
-        }
-
-        footer {
-            background-color: #333;
-            color: #fff;
-            padding: 15px 0;
-            text-align: center;
-        }
-
-        footer ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        footer ul li {
-            display: inline-block;
-            margin: 0 10px;
-        }
-
-        footer ul li a {
-            color: #fff;
-            text-decoration: none;
-        }
-
-        footer ul li a:hover {
-            text-decoration: underline;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .course-info {
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-            }
-
-            .course-info img {
-                margin-bottom: 20px;
-            }
-
-            .course-info div {
-                max-width: 100%;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .course-title {
-                font-size: 2em;
-            }
-
-            .course-info img {
-                max-width: 150px;
-                height: 150px;
-            }
-
-            .resources {
-                padding: 15px;
-            }
-
-            .resources h3 {
-                font-size: 1.5em;
-            }
-        }
-
-    </style>
+    <title>Course Detail - Back Paper Buddies</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
 
-<header>
-    <h1>Course Detail</h1>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="courses.html">Courses</a></li>
-            <li><a href="aboutUs.html">About Us</a></li>
-        </ul>
-    </nav>
+<header class="bg-primary text-white py-3">
+    <div class="container">
+        <h1 class="text-center">Course Detail</h1>
+        <nav>
+            <ul class="nav justify-content-center">
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="courses.html">Courses</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="aboutUs.html">About Us</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
 </header>
 
-<section class="course-detail">
+<section class="course-detail py-5 flex-grow-1">
+    <div class="container" id="AddInformation">
+    </div>
 </section>
 
-<footer>
-    <p>&copy; 2024 E-Learning Platform</p>
-    <ul>
-        <li><a href="#">Privacy Policy</a></li>
-        <li><a href="#">Terms of Service</a></li>
-    </ul>
+<footer class="bg-dark text-white py-3">
+    <div class="container text-center">
+        <p>&copy; 2024 E-Learning Platform</p>
+        <ul class="list-inline">
+            <li class="list-inline-item"><a class="text-white" href="#">Privacy Policy</a></li>
+            <li class="list-inline-item"><a class="text-white" href="#">Terms of Service</a></li>
+        </ul>
+    </div>
 </footer>
 
-<script src="main.js">
-</script>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="main.js"></script>
 </body>
 </html>
